@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/icon.jpg">
+    <title>Estatística Completa</title>
+</head>
+<body>
+    <h1>Programa Estatística</h1>
+    <h3>Desenvolvedor: Thiago Alves</h3>
+    <h4>Matemática - CIEP 298</h4>
+    <form>
+        <p>
+            Valor: <input type="number" id="inValor" max="999" step="0.01" required>
+            <input type="submit" id="submit" value="Insira o 1° Valor">
+        </p>
+    </form>
+    <button>Processar as Estatísticas</button>
+    <h3 id="outOrdem">Dados em Ordem:</h3>
+    <h3 id="outMedia">Média = </h3>
+    <h3 id="outMediana">Mediana = </h3>
+    <h3 id="outModa">Moda = </h3>
+    <h3 id="outDesvMedio">Desvio Médio = </h3>
+    <h3 id="outDesvPadrao">Desvio Padrão = </h3>
+    <div></div>
+    <script src="../matematica.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
