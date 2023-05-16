@@ -14,12 +14,15 @@
     <h4>Matemática - CIEP 298</h4>
     <form>
         <p>
-            Valor: <input type="number" id="inValor" max="999" step="0.01" required>
-            <input type="submit" id="submit" value="Insira o 1° Valor">
-        </p>
+            Valor: <input type="number" id="inValor" max="999" step="0.01" required autofocus>
+            <input type="submit" id="submit" value="Insira o 1° Valor">           
+        </p>              
     </form>
-    <button>Processar as Estatísticas</button>
-    <h3 id="outOrdem">Dados em Ordem:</h3>
+    <p>
+        Nº de classes: <input type="number" id="inClasses" min="1">        
+    </p> 
+    <button>Processar as Estatísticas</button>    
+    <h3 id="outOrdem">Rol (dados em ordem):</h3>
     <h3 id="outMedia">Média = </h3>
     <h3 id="outMediana">Mediana = </h3>
     <h3 id="outModa">Moda = </h3>

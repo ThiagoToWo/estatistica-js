@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const submit = document.querySelector("#submit");
+const inClasses = document.querySelector("#inClasses");
 const process = document.querySelector("button");
 const resp1 = document.querySelector("#outOrdem");
 const resp2 = document.querySelector("#outMedia");
@@ -16,11 +17,17 @@ form.addEventListener("submit", (e) => {
 
     dados.push(Number(form.inValor.value));
     submit.value = `Insira o ${dados.length + 1}° Valor`;
+    inClasses.value = Math.round(1 + 3.32 * Math.log10(dados.length)) // Regra de Sturges
     form.inValor.value = "";
     form.inValor.focus();
 });
 
 process.addEventListener("click", () => {
+    if (inClasses.value < 1) {
+        alert("Insira uma quantidade de classes maior que 0.")
+        return;
+    }
+
     resp1.innerText = "Dados em Ordem: ";
     resp2.innerText = "Média = ";
     resp3.innerText = "Mediana = ";
@@ -50,7 +57,7 @@ function histograma(dados) {
     const max = dados[dados.length - 1];
     const min = dados[0];
     const amplitude = max - min;
-    const num_classe = Number(prompt("Insira a quantidade de classes: "));
+    const num_classe = Number(inClasses.value);
     const amp_classe = Math.floor(amplitude / num_classe) + 1;
     let barra;
 
