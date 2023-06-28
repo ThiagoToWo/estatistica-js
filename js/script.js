@@ -35,7 +35,7 @@ process.addEventListener("click", () => {
     resp5.innerText = "Desvio Médio = ";
     resp6.innerText = "Desvio Padrão = ";
 
-    dados.sort();
+    dados.sort((a, b) => a - b);
     const ordem = dados.join(" ");
     const media = m.media(dados);
     const mediana = m.mediana(dados);
